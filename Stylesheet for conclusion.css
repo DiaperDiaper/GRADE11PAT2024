@@ -4,37 +4,6 @@ body{
     font-size: large;
 }
 
-table{
-    background-color: aquamarine;
-}
-
-.centered-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50%; /* Full viewport height */
-}
-
-.centered-image img {
-    max-width: 50%; /* Make sure the image is responsive */
-    height: auto;
-    cursor: pointer; /* Cursor changes to a pointer on hover */
-}
-
-/* Style the "Return to Top" button */
-.return-to-top {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007BFF; /* Change to your desired button color */
-    color: #fff; /* Change to your desired text color */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
 /* Style the navigation bar */
 .navbar {
     background-color: #333333;
@@ -77,20 +46,51 @@ table{
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-body {
+.slider {
     display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
+    transition: transform 0.5s ease-in-out;
 }
 
-.content {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+.slide {
+    min-width: 100%;
+    transition: 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.arrows span {
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: white;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.arrows span:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 footer {
@@ -102,8 +102,25 @@ footer {
     width: 100%;
 }
 
-footer p {
-    margin: 0;
+button{
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    align-content: center;
+    width: 70px;
+}
+
+.centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%; /* Full viewport height */
+}
+
+.centered-image img {
+    max-width: 50%; /* Make sure the image is responsive */
+    height: auto;
+    cursor: pointer; /* Cursor changes to a pointer on hover */
 }
 
 * {
@@ -138,24 +155,14 @@ body {
 }
 
 #topBtn:hover {
-    background-color: #d71e1e;
+    background-color: #ff0000;
 }
 
 table{
+    background-color: bisque;
+    border-radius: 5px;
+    border-spacing: 10px;
     text-align: center;
-    text-wrap: 5px;
-    background-color: beige;
-    padding: 5px;
-    border-spacing: 5px;
-}
-
-.stable {
+    vertical-align: middle;
     align-items: center;
-    width: 500px;
-}
-
-.disposal {
-    align-content: center;
-    min-width: 50px;
-    max-width: 500px;
 }
